@@ -1,0 +1,29 @@
+name: Daily Commits
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # Runs daily at 12:00 UTC
+  workflow_dispatch: 
+
+jobs:
+  commit-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "github-actions@github.com"
+
+      - name: Make random number of commits
+        run: |
+          for i in $(seq 1 $((RANDOM % 20 + 1))); do
+            echo "Update: $(date)" >> activity.log
+            git add activity.log
+            git commit -m "Automated commit #$i"
+          done
+
+      - name: Push changes
+        run: git push
