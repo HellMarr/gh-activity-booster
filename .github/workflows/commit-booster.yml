@@ -26,4 +26,6 @@ jobs:
           done
 
       - name: Push changes
-        run: git push
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/HellMarr/gh-activity-booster.git
+          git push
