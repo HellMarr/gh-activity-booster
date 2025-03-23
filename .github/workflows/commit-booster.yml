@@ -22,7 +22,7 @@ jobs:
           for i in $(seq 1 $((RANDOM % 20 + 1))); do
             echo "Update: $(date)" >> activity.log
             git add activity.log
-            git commit -m "Automated commit #$i"
+            git commit -m "Updated activity log on $(date) #$i"
           done
 
       - name: Push changes
