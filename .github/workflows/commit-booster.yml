@@ -14,8 +14,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "GitHub Action Bot"
-          git config --global user.email "github-actions@github.com"
+          git config --global user.name "HellMarr"
+          git config --global user.email "martin.heliot@free.fr"
 
       - name: Make random number of commits
         run: |
