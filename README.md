@@ -8,23 +8,23 @@ This repo generates fake but real commits every day to boost your GitHub activit
 A simple GitHub Action runs daily, making a random number of commits (1–20) to this repo, keeping your contribution graph nice and green 🌿.
 
 # 🚀 How to Use It
-Fork this repo to your own GitHub account.
+1) Fork this repo to your own GitHub account.
 
-Go to
+2) Go to
 Your fork → Settings → Actions → General, and:
 
-Set Workflow permissions to Read and write permissions
-Enable ✅ Allow GitHub Actions to create and approve pull requests
-In
+- Set Workflow permissions to Read and write permissions
+- Enable ✅ Allow GitHub Actions to create and approve pull requests
+3) In
 Settings → Secrets and variables → Actions, add your GitHub email:
 
-Name: USER_EMAIL
-Value: your actual GitHub email (visible in your GitHub email settings)
-(Optional) Edit .github/workflows/commit-booster.yml to change:
+- Name: USER_EMAIL
+- Value: your actual GitHub email (visible in your GitHub email settings)
+4) (Optional) Edit .github/workflows/commit-booster.yml to change:
 
-Commit frequency (cron)
-Max number of commits per run
-Commit message style
+- Commit frequency (cron)
+- Max number of commits per run
+- Commit message style
 # 🧪 Want to Test It Immediately?
 You don’t need to wait until tomorrow.
 Head to your fork → Actions → Daily Commits → Run workflow → Run workflow ✅
